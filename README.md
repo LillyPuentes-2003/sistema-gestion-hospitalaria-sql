@@ -13,30 +13,20 @@ Base de datos relacional para sistema integral de gestión hospitalaria, version
 - **800+ registros** de datos de prueba
 
 ## 🗂️ Estructura del Proyecto
----
+
+```text
 hospital-sql/
-├── changelog-master.yaml           # Orquestador principal
-├── 01_ddl/                         # Data Definition Language
+├── changelog-master.yaml
+├── 01_ddl/
 │   ├── 0000changelog.yaml
-│   ├── 00_extensions/              # Extensiones PostgreSQL
-│   │   ├── 0000changelog.yaml
-│   │   └── 001-uuid-ossp.yaml
-│   ├── 01_schemas/                 # Esquemas
-│   │   ├── 0000changelog.yaml
-│   │   └── 001-create-schemas.yaml
+│   ├── 00_extensions/
+│   │   └── 0000changelog.yaml
+│   ├── 01_schemas/
+│   │   └── 0000changelog.yaml
 │   ├── 02_types/
 │   │   └── 0000changelog.yaml
-│   ├── 03_tables/                  # Tablas principales
-│   │   ├── 0000changelog.yaml
-│   │   ├── 001-create-especialidades.yaml
-│   │   ├── 002-create-medicos.yaml
-│   │   ├── 003-create-eps.yaml
-│   │   ├── 004-create-pacientes.yaml
-│   │   ├── 005-create-citas.yaml
-│   │   ├── 006-create-diagnosticos-cie10.yaml
-│   │   ├── 007-create-consultas.yaml
-│   │   ├── 008-create-medicamentos.yaml
-│   │   └── 009-create-prescripciones.yaml
+│   ├── 03_tables/
+│   │   └── 0000changelog.yaml
 │   ├── 04_views/
 │   │   └── 0000changelog.yaml
 │   ├── 05_materialized_views/
@@ -47,24 +37,12 @@ hospital-sql/
 │   │   └── 0000changelog.yaml
 │   ├── 08_triggers/
 │   │   └── 0000changelog.yaml
-│   └── 09_indexes/                 # Índices
-│       ├── 0000changelog.yaml
-│       ├── 001-index-medicos.yaml
-│       ├── 002-index-pacientes.yaml
-│       └── 003-index-citas.yaml
-├── 02_dml/                         # Data Manipulation Language
+│   └── 09_indexes/
+│       └── 0000changelog.yaml
+├── 02_dml/
 │   ├── 0000changelog.yaml
-│   ├── 00_inserts/                 # Datos de parametrización y sintéticos
-│   │   ├── 0000changelog.yaml
-│   │   ├── 001-insert-especialidades.yaml
-│   │   ├── 002-insert-eps.yaml
-│   │   ├── 003-insert-diagnosticos-cie10.yaml
-│   │   ├── 004-insert-medicos.yaml
-│   │   ├── 005-insert-pacientes.yaml
-│   │   ├── 006-insert-citas.yaml
-│   │   ├── 007-insert-consultas.yaml
-│   │   ├── 008-insert-medicamentos.yaml
-│   │   └── 009-insert-prescripciones.yaml
+│   ├── 00_inserts/
+│   │   └── 0000changelog.yaml
 │   ├── 01_updates/
 │   │   └── 0000changelog.yaml
 │   ├── 02_deletes/
@@ -73,71 +51,38 @@ hospital-sql/
 │   │   └── 0000changelog.yaml
 │   └── 04_patches/
 │       └── 0000changelog.yaml
-├── 03_dcl/                         # Data Control Language
+├── 03_dcl/
 │   ├── 0000changelog.yaml
-│   ├── 00_roles/                   # Roles de usuario
-│   │   ├── 0000changelog.yaml
-│   │   ├── 001-create-role-admin.yaml
-│   │   ├── 002-create-role-medico.yaml
-│   │   ├── 003-create-role-recepcionista.yaml
-│   │   └── 004-create-role-farmaceutico.yaml
-│   ├── 01_grants/                  # Permisos
-│   │   ├── 0000changelog.yaml
-│   │   ├── 001-grants-admin.yaml
-│   │   ├── 002-grants-medico.yaml
-│   │   ├── 003-grants-recepcionista.yaml
-│   │   └── 004-grants-farmaceutico.yaml
+│   ├── 00_roles/
+│   │   └── 0000changelog.yaml
+│   ├── 01_grants/
+│   │   └── 0000changelog.yaml
 │   └── 02_policies/
 │       └── 0000changelog.yaml
-├── 04_tcl/                         # Transaction Control Language
+├── 04_tcl/
 │   ├── 0000changelog.yaml
-│   ├── 00_transaction_blocks/      # Transacciones críticas
-│   │   ├── 0000changelog.yaml
-│   │   ├── 001-transaccion-agendar-cita.yaml
-│   │   ├── 002-transaccion-atender-consulta.yaml
-│   │   └── 003-transaccion-despachar-medicamento.yaml
+│   ├── 00_transaction_blocks/
+│   │   └── 0000changelog.yaml
 │   └── 01_manual_recoveries/
 │       └── 0000changelog.yaml
-├── 05_rollbacks/                   # Scripts de reversión
+├── 05_rollbacks/
 │   ├── 01_ddl/
-│   │   ├── 00_extensions/
-│   │   ├── 01_schemas/
-│   │   ├── 03_tables/
-│   │   │   ├── 001-rollback-especialidades.sql
-│   │   │   ├── 002-rollback-medicos.sql
-│   │   │   ├── 003-rollback-eps.sql
-│   │   │   ├── 004-rollback-pacientes.sql
-│   │   │   ├── 005-rollback-citas.sql
-│   │   │   ├── 006-rollback-diagnosticos-cie10.sql
-│   │   │   ├── 007-rollback-consultas.sql
-│   │   │   ├── 008-rollback-medicamentos.sql
-│   │   │   └── 009-rollback-prescripciones.sql
-│   │   └── 09_indexes/
 │   ├── 02_dml/
-│   │   └── 00_inserts/
 │   ├── 03_dcl/
-│   │   ├── 00_roles/
-│   │   └── 01_grants/
 │   └── 04_tcl/
-│       └── 00_transaction_blocks/
-├── docker/                         # Configuración Docker
+├── docker/
 │   └── liquibase/
 │       └── Dockerfile
-├── docs/                           # Documentación
-│   ├── sql-layer-architecture.md
-│   ├── MODELO_ER.md
-│   └── DICCIONARIO_DATOS.md
-├── scripts/                        # Scripts de ayuda
-│   ├── 01_rollback_by_id.ps1
-│   ├── 02_rollback_by_id_preview.ps1
-│   └── generar_datos_sinteticos.py
+├── docs/
+├── scripts/
 ├── docker-compose.yml
 ├── .env.example
 ├── liquibase.properties.example
 ├── .gitignore
 ├── .dockerignore
 └── README.md
----
+```
+
 ## 📊 Modelo de Datos
 
 ### Tablas Principales
@@ -243,9 +188,9 @@ docker-compose --profile tooling run --rm liquibase rollback-to-date "2026-05-11
 - **medico** - Lectura completa, escritura en consultas y prescripciones
 - **recepcionista** - Gestión de citas y datos de pacientes
 - **farmaceutico** - Gestión de inventario y despacho de medicamentos
----
+  
 ### Credenciales por Defecto
-
+```text
 Usuario: ariel5253
 
 Password: ariel5253
@@ -253,8 +198,7 @@ Password: ariel5253
 Base de datos: hospital
 
 Puerto: 5433
-
----
+```
 ## 📈 Datos Incluidos
 
 ### Datos de Parametrización (Reales)
