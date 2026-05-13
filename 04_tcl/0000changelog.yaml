@@ -1,0 +1,4 @@
+databaseChangeLog:
+  - include:
+      file: 04_tcl/00_transaction_blocks/0000changelog.yaml
+      relativeToChangelogFile: true

@@ -1,0 +1,10 @@
+changeLogFile=changelog-master.yaml
+url=jdbc:postgresql://localhost:5433/hospital
+username=ariel5253
+password=ariel5253
+driver=org.postgresql.Driver
+classpath=.
+logLevel=INFO
+contexts=dev
+labels=
+defaultSchemaName=public

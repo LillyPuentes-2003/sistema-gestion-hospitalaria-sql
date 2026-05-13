@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: hospital-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-hospital}
+      POSTGRES_USER: ${POSTGRES_USER:-ariel5253}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-ariel5253}
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8 --locale=es_CO.UTF-8"
+      TZ: America/Bogota
+    ports:
+      - "${POSTGRES_PORT:-5433}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - hospital-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-ariel5253} -d ${POSTGRES_DB:-hospital}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  liquibase:
+    build:
+      context: ./docker/liquibase
+      dockerfile: Dockerfile
+    container_name: hospital-liquibase
+    profiles:
+      - tooling
+    environment:
+      LIQUIBASE_COMMAND_URL: jdbc:postgresql://postgres:5432/${POSTGRES_DB:-hospital}
+      LIQUIBASE_COMMAND_USERNAME: ${POSTGRES_USER:-ariel5253}
+      LIQUIBASE_COMMAND_PASSWORD: ${POSTGRES_PASSWORD:-ariel5253}
+      LIQUIBASE_COMMAND_CHANGELOG_FILE: changelog-master.yaml
+    volumes:
+      - .:/liquibase/changelog
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - hospital-network
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  hospital-network:
+    driver: bridge

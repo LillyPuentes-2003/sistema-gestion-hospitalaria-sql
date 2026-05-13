@@ -1,0 +1,28 @@
+# Environment files
+.env
+*.env
+!.env.example
+
+# Liquibase
+liquibase.properties
+!liquibase.properties.example
+*.log
+
+# Docker
+.docker/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Backups
+*.bak
+*.backup
+*.sql~

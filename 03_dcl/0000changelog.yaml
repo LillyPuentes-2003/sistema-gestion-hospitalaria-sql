@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - include:
+      file: 03_dcl/00_roles/0000changelog.yaml
+      relativeToChangelogFile: true
+  
+  - include:
+      file: 03_dcl/01_grants/0000changelog.yaml
+      relativeToChangelogFile: true
