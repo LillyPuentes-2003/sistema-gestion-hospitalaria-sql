@@ -1,0 +1,268 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002-insert-health-insurance-companies
+      author: Lilly
+      changes:
+        - insert:
+            tableName: health_insurance_companies
+            columns:
+              - column:
+                  name: name
+                  value: Sanitas EPS
+              - column:
+                  name: code
+                  value: EPS001
+              - column:
+                  name: type
+                  value: Contributivo
+        
+        - insert:
+            tableName: health_insurance_companies
+            columns:
+              - column:
+                  name: name
+                  value: Sura EPS
+              - column:
+                  name: code
+                  value: EPS002
+              - column:
+                  name: type
+                  value: Contributivo
+        
+        - insert:
+            tableName: health_insurance_companies
+            columns:
+              - column:
+                  name: name
+                  value: Salud Total EPS
+              - column:
+                  name: code
+                  value: EPS003
+              - column:
+                  name: type
+                  value: Contributivo
+        
+        - insert:
+            tableName: health_insurance_companies
+            columns:
+              - column:
+                  name: name
+                  value: Nueva EPS
+              - column:
+                  name: code
+                  value: EPS004
+              - column:
+                  name: type
+                  value: Subsidiado
+        
+        - insert:
+            tableName: health_insurance_companies
+            columns:
+              - column:
+                  name: name
+                  value: Compensar EPS
+              - column:
+                  name: code
+                  value: EPS005
+              - column:
+                  name: type
+                  value: Contributivo
+        
+        - insert:
+            tableName: health_insurance_companies
+            columns:
+              - column:
+                  name: name
+                  value: Famisanar EPS
+              - column:
+                  name: code
+                  value: EPS006
+              - column:
+                  name: type
+                  value: Contributivo
+        
+        - insert:
+            tableName: health_insurance_companies
+            columns:
+              - column:
+                  name: name
+                  value: Coomeva EPS
+              - column:
+                  name: code
+                  value: EPS007
+              - column:
+                  name: type
+                  value: Contributivo
+        
+        - insert:
+            tableName: health_insurance_companies
+            columns:
+              - column:
+                  name: name
+                  value: Cafesalud EPS
+              - column:
+                  name: code
+                  value: EPS008
+              - column:
+                  name: type
+                  value: Subsidiado
+        
+        - insert:
+            tableName: health_insurance_companies
+            columns:
+              - column:
+                  name: name
+                  value: Aliansalud EPS
+              - column:
+                  name: code
+                  value: EPS009
+              - column:
+                  name: type
+                  value: Contributivo
+        
+        - insert:
+            tableName: health_insurance_companies
+            columns:
+              - column:
+                  name: name
+                  value: SOS EPS
+              - column:
+                  name: code
+                  value: EPS010
+              - column:
+                  name: type
+                  value: Contributivo
+        
+        - insert:
+            tableName: health_insurance_companies
+            columns:
+              - column:
+                  name: name
+                  value: Medimás EPS
+              - column:
+                  name: code
+                  value: EPS011
+              - column:
+                  name: type
+                  value: Subsidiado
+        
+        - insert:
+            tableName: health_insurance_companies
+            columns:
+              - column:
+                  name: name
+                  value: Saludvida EPS
+              - column:
+                  name: code
+                  value: EPS012
+              - column:
+                  name: type
+                  value: Subsidiado
+        
+        - insert:
+            tableName: health_insurance_companies
+            columns:
+              - column:
+                  name: name
+                  value: Capital Salud EPS
+              - column:
+                  name: code
+                  value: EPS013
+              - column:
+                  name: type
+                  value: Subsidiado
+        
+        - insert:
+            tableName: health_insurance_companies
+            columns:
+              - column:
+                  name: name
+                  value: Ecoopsos EPS
+              - column:
+                  name: code
+                  value: EPS014
+              - column:
+                  name: type
+                  value: Contributivo
+        
+        - insert:
+            tableName: health_insurance_companies
+            columns:
+              - column:
+                  name: name
+                  value: Mutual Ser EPS
+              - column:
+                  name: code
+                  value: EPS015
+              - column:
+                  name: type
+                  value: Contributivo
+        
+        - insert:
+            tableName: health_insurance_companies
+            columns:
+              - column:
+                  name: name
+                  value: Cruz Blanca EPS
+              - column:
+                  name: code
+                  value: EPS016
+              - column:
+                  name: type
+                  value: Contributivo
+        
+        - insert:
+            tableName: health_insurance_companies
+            columns:
+              - column:
+                  name: name
+                  value: Comfenalco Valle EPS
+              - column:
+                  name: code
+                  value: EPS017
+              - column:
+                  name: type
+                  value: Contributivo
+        
+        - insert:
+            tableName: health_insurance_companies
+            columns:
+              - column:
+                  name: name
+                  value: Saludcoop EPS
+              - column:
+                  name: code
+                  value: EPS018
+              - column:
+                  name: type
+                  value: Contributivo
+        
+        - insert:
+            tableName: health_insurance_companies
+            columns:
+              - column:
+                  name: name
+                  value: Colsanitas EPS
+              - column:
+                  name: code
+                  value: EPS019
+              - column:
+                  name: type
+                  value: Contributivo
+        
+        - insert:
+            tableName: health_insurance_companies
+            columns:
+              - column:
+                  name: name
+                  value: Asmet Salud EPS
+              - column:
+                  name: code
+                  value: EPS020
+              - column:
+                  name: type
+                  value: Subsidiado
+      
+      rollback:
+        - delete:
+            tableName: health_insurance_companies

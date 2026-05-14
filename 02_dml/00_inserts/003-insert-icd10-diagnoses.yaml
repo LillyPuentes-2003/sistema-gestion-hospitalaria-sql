@@ -1,0 +1,258 @@
+databaseChangeLog:
+  - changeSet:
+      id: 003-insert-icd10-diagnoses
+      author: Lilly
+      changes:
+        # Enfermedades respiratorias
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "J00" }
+              - column: { name: description, value: "Acute nasopharyngitis (common cold)" }
+              - column: { name: category, value: "Respiratory diseases" }
+        
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "J06.9" }
+              - column: { name: description, value: "Acute upper respiratory infection, unspecified" }
+              - column: { name: category, value: "Respiratory diseases" }
+        
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "J18.9" }
+              - column: { name: description, value: "Pneumonia, unspecified organism" }
+              - column: { name: category, value: "Respiratory diseases" }
+        
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "J45.9" }
+              - column: { name: description, value: "Asthma, unspecified" }
+              - column: { name: category, value: "Respiratory diseases" }
+        
+        # Enfermedades infecciosas
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "A09" }
+              - column: { name: description, value: "Infectious gastroenteritis and colitis, unspecified" }
+              - column: { name: category, value: "Infectious diseases" }
+        
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "A64" }
+              - column: { name: description, value: "Unspecified sexually transmitted disease" }
+              - column: { name: category, value: "Infectious diseases" }
+        
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "B34.9" }
+              - column: { name: description, value: "Viral infection, unspecified" }
+              - column: { name: category, value: "Infectious diseases" }
+        
+        # Enfermedades cardiovasculares
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "I10" }
+              - column: { name: description, value: "Essential (primary) hypertension" }
+              - column: { name: category, value: "Cardiovascular diseases" }
+        
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "I25.10" }
+              - column: { name: description, value: "Atherosclerotic heart disease without angina pectoris" }
+              - column: { name: category, value: "Cardiovascular diseases" }
+        
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "I21.9" }
+              - column: { name: description, value: "Acute myocardial infarction, unspecified" }
+              - column: { name: category, value: "Cardiovascular diseases" }
+        
+        # Enfermedades metabólicas
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "E11.9" }
+              - column: { name: description, value: "Type 2 diabetes mellitus without complications" }
+              - column: { name: category, value: "Metabolic diseases" }
+        
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "E66.9" }
+              - column: { name: description, value: "Obesity, unspecified" }
+              - column: { name: category, value: "Metabolic diseases" }
+        
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "E78.5" }
+              - column: { name: description, value: "Hyperlipidemia, unspecified" }
+              - column: { name: category, value: "Metabolic diseases" }
+        
+        # Enfermedades digestivas
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "K21.9" }
+              - column: { name: description, value: "Gastro-esophageal reflux disease without esophagitis" }
+              - column: { name: category, value: "Digestive diseases" }
+        
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "K29.70" }
+              - column: { name: description, value: "Gastritis, unspecified, without bleeding" }
+              - column: { name: category, value: "Digestive diseases" }
+        
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "K80.20" }
+              - column: { name: description, value: "Calculus of gallbladder without cholecystitis" }
+              - column: { name: category, value: "Digestive diseases" }
+        
+        # Enfermedades musculoesqueléticas
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "M54.5" }
+              - column: { name: description, value: "Low back pain" }
+              - column: { name: category, value: "Musculoskeletal diseases" }
+        
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "M79.3" }
+              - column: { name: description, value: "Panniculitis, unspecified" }
+              - column: { name: category, value: "Musculoskeletal diseases" }
+        
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "M25.50" }
+              - column: { name: description, value: "Pain in unspecified joint" }
+              - column: { name: category, value: "Musculoskeletal diseases" }
+        
+        # Enfermedades dermatológicas
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "L30.9" }
+              - column: { name: description, value: "Dermatitis, unspecified" }
+              - column: { name: category, value: "Skin diseases" }
+        
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "L70.0" }
+              - column: { name: description, value: "Acne vulgaris" }
+              - column: { name: category, value: "Skin diseases" }
+        
+        # Enfermedades genitourinarias
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "N39.0" }
+              - column: { name: description, value: "Urinary tract infection, site not specified" }
+              - column: { name: category, value: "Genitourinary diseases" }
+        
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "N18.9" }
+              - column: { name: description, value: "Chronic kidney disease, unspecified" }
+              - column: { name: category, value: "Genitourinary diseases" }
+        
+        # Traumatismos
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "S06.0" }
+              - column: { name: description, value: "Concussion" }
+              - column: { name: category, value: "Injuries" }
+        
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "S52.5" }
+              - column: { name: description, value: "Fracture of lower end of radius" }
+              - column: { name: category, value: "Injuries" }
+        
+        # Trastornos mentales
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "F41.9" }
+              - column: { name: description, value: "Anxiety disorder, unspecified" }
+              - column: { name: category, value: "Mental disorders" }
+        
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "F32.9" }
+              - column: { name: description, value: "Major depressive disorder, single episode, unspecified" }
+              - column: { name: category, value: "Mental disorders" }
+        
+        # Embarazo y parto
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "Z34.90" }
+              - column: { name: description, value: "Encounter for supervision of normal pregnancy, unspecified" }
+              - column: { name: category, value: "Pregnancy" }
+        
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "O80" }
+              - column: { name: description, value: "Encounter for full-term uncomplicated delivery" }
+              - column: { name: category, value: "Pregnancy" }
+        
+        # Otros diagnósticos comunes
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "R50.9" }
+              - column: { name: description, value: "Fever, unspecified" }
+              - column: { name: category, value: "Symptoms and signs" }
+        
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "R51" }
+              - column: { name: description, value: "Headache" }
+              - column: { name: category, value: "Symptoms and signs" }
+        
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "R10.9" }
+              - column: { name: description, value: "Unspecified abdominal pain" }
+              - column: { name: category, value: "Symptoms and signs" }
+        
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "R05" }
+              - column: { name: description, value: "Cough" }
+              - column: { name: category, value: "Symptoms and signs" }
+        
+        - insert:
+            tableName: icd10_diagnoses
+            columns:
+              - column: { name: code, value: "Z00.00" }
+              - column: { name: description, value: "Encounter for general adult medical examination" }
+              - column: { name: category, value: "Health examinations" }
+      
+      rollback:
+        - delete:
+            tableName: icd10_diagnoses

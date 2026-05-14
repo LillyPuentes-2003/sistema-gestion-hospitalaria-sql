@@ -2,3 +2,11 @@ databaseChangeLog:
   - include:
       file: 001-insert-specialties.yaml
       relativeToChangelogFile: true
+
+  - include:
+      file: 002-insert-health-insurance-companies.yaml
+      relativeToChangelogFile: true   
+
+  - include:
+      file: 003-insert-icd10-diagnoses.yaml
+      relativeToChangelogFile: true    
