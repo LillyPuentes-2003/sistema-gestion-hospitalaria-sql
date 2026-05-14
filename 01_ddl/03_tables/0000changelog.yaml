@@ -1,2 +1,36 @@
 databaseChangeLog:
-  # Los changesets de schemas irán aquí
+  - include:
+      file: 001-create-specialties.yaml
+      relativeToChangelogFile: true
+  
+  - include:
+      file: 002-create-health-insurance-companies.yaml
+      relativeToChangelogFile: true
+  
+  - include:
+      file: 003-create-doctors.yaml
+      relativeToChangelogFile: true
+  
+  - include:
+      file: 004-create-patients.yaml
+      relativeToChangelogFile: true
+  
+  - include:
+      file: 005-create-icd10-diagnoses.yaml
+      relativeToChangelogFile: true
+  
+  - include:
+      file: 006-create-medications.yaml
+      relativeToChangelogFile: true
+  
+  - include:
+      file: 007-create-appointments.yaml
+      relativeToChangelogFile: true
+  
+  - include:
+      file: 008-create-consultations.yaml
+      relativeToChangelogFile: true
+  
+  - include:
+      file: 009-create-prescriptions.yaml
+      relativeToChangelogFile: true

@@ -1,0 +1,60 @@
+databaseChangeLog:
+  - changeSet:
+      id: 008-create-consultations
+      author: Lilly
+      changes:
+        - createTable:
+            tableName: consultations
+            columns:
+              - column:
+                  name: id
+                  type: SERIAL
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: pk_consultations
+              - column:
+                  name: appointment_id
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+                    unique: true
+                    uniqueConstraintName: uq_consultations_appointment
+                    foreignKeyName: fk_consultations_appointment
+                    references: appointments(id)
+              - column:
+                  name: icd10_diagnosis_id
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_consultations_diagnosis
+                    references: icd10_diagnoses(id)
+              - column:
+                  name: symptoms
+                  type: TEXT
+              - column:
+                  name: physical_examination
+                  type: TEXT
+              - column:
+                  name: diagnosis_notes
+                  type: TEXT
+              - column:
+                  name: treatment_plan
+                  type: TEXT
+              - column:
+                  name: follow_up_date
+                  type: DATE
+              - column:
+                  name: created_at
+                  type: TIMESTAMP
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: TIMESTAMP
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  constraints:
+                    nullable: false
+      rollback:
+        - dropTable:
+            tableName: consultations

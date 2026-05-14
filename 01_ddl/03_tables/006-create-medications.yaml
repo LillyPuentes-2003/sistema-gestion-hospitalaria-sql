@@ -1,0 +1,72 @@
+databaseChangeLog:
+  - changeSet:
+      id: 006-create-medications
+      author: Lilly
+      changes:
+        - createTable:
+            tableName: medications
+            columns:
+              - column:
+                  name: id
+                  type: SERIAL
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: pk_medications
+              - column:
+                  name: name
+                  type: VARCHAR(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: generic_name
+                  type: VARCHAR(200)
+              - column:
+                  name: presentation
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: concentration
+                  type: VARCHAR(50)
+              - column:
+                  name: unit_price
+                  type: DECIMAL(10,2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: stock_quantity
+                  type: INTEGER
+                  defaultValueNumeric: 0
+                  constraints:
+                    nullable: false
+              - column:
+                  name: minimum_stock
+                  type: INTEGER
+                  defaultValueNumeric: 10
+              - column:
+                  name: expiration_date
+                  type: DATE
+              - column:
+                  name: manufacturer
+                  type: VARCHAR(150)
+              - column:
+                  name: is_active
+                  type: BOOLEAN
+                  defaultValueBoolean: true
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_at
+                  type: TIMESTAMP
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: TIMESTAMP
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  constraints:
+                    nullable: false
+      rollback:
+        - dropTable:
+            tableName: medications
