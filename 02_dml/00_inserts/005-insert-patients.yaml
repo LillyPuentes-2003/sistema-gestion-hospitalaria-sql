@@ -1,0 +1,78 @@
+databaseChangeLog:
+  - changeSet:
+      id: 005-insert-patients
+      author: Lilly
+      changes:
+        - insert:
+            tableName: patients
+            columns:
+              - column: { name: health_insurance_company_id, valueNumeric: 1 }  # Sanitas
+              - column: { name: first_name, value: "Juan" }
+              - column: { name: last_name, value: "Pérez García" }
+              - column: { name: identification_number, value: "2001234567" }
+              - column: { name: date_of_birth, valueDate: "1985-03-15" }
+              - column: { name: gender, value: "Male" }
+              - column: { name: blood_type, value: "O+" }
+              - column: { name: phone, value: "3101234567" }
+              - column: { name: email, value: "juan.perez@email.com" }
+              - column: { name: address, value: "Calle 10 #20-30, Neiva" }
+        
+        - insert:
+            tableName: patients
+            columns:
+              - column: { name: health_insurance_company_id, valueNumeric: 2 }  # Sura
+              - column: { name: first_name, value: "María" }
+              - column: { name: last_name, value: "Rodríguez Sánchez" }
+              - column: { name: identification_number, value: "2001234568" }
+              - column: { name: date_of_birth, valueDate: "1990-07-22" }
+              - column: { name: gender, value: "Female" }
+              - column: { name: blood_type, value: "A+" }
+              - column: { name: phone, value: "3101234568" }
+              - column: { name: email, value: "maria.rodriguez@email.com" }
+              - column: { name: address, value: "Carrera 5 #15-45, Neiva" }
+        
+        - insert:
+            tableName: patients
+            columns:
+              - column: { name: health_insurance_company_id, valueNumeric: 3 }
+              - column: { name: first_name, value: "Pedro" }
+              - column: { name: last_name, value: "Gómez Torres" }
+              - column: { name: identification_number, value: "2001234569" }
+              - column: { name: date_of_birth, valueDate: "1978-11-08" }
+              - column: { name: gender, value: "Male" }
+              - column: { name: blood_type, value: "B+" }
+              - column: { name: phone, value: "3101234569" }
+              - column: { name: email, value: "pedro.gomez@email.com" }
+              - column: { name: address, value: "Avenida 20 #8-12, Neiva" }
+        
+        - insert:
+            tableName: patients
+            columns:
+              - column: { name: health_insurance_company_id, valueNumeric: 1 }
+              - column: { name: first_name, value: "Ana" }
+              - column: { name: last_name, value: "Martínez López" }
+              - column: { name: identification_number, value: "2001234570" }
+              - column: { name: date_of_birth, valueDate: "1995-05-12" }
+              - column: { name: gender, value: "Female" }
+              - column: { name: blood_type, value: "AB+" }
+              - column: { name: phone, value: "3101234570" }
+              - column: { name: email, value: "ana.martinez@email.com" }
+              - column: { name: address, value: "Calle 25 #18-40, Neiva" }
+        
+        - insert:
+            tableName: patients
+            columns:
+              - column: { name: health_insurance_company_id, valueNumeric: 5 }
+              - column: { name: first_name, value: "Carlos" }
+              - column: { name: last_name, value: "Díaz Ramírez" }
+              - column: { name: identification_number, value: "2001234571" }
+              - column: { name: date_of_birth, valueDate: "2000-01-20" }
+              - column: { name: gender, value: "Male" }
+              - column: { name: blood_type, value: "O-" }
+              - column: { name: phone, value: "3101234571" }
+              - column: { name: email, value: "carlos.diaz@email.com" }
+              - column: { name: address, value: "Carrera 8 #22-15, Neiva" }
+      
+      rollback:
+        - delete:
+            tableName: patients

@@ -1,0 +1,118 @@
+databaseChangeLog:
+  - changeSet:
+      id: 004-insert-doctors
+      author: Lilly
+      changes:
+        - insert:
+            tableName: doctors
+            columns:
+              - column: { name: specialty_id, valueNumeric: 1 }  # General Medicine
+              - column: { name: first_name, value: "Carlos" }
+              - column: { name: last_name, value: "Rodríguez" }
+              - column: { name: identification_number, value: "1001234567" }
+              - column: { name: medical_license, value: "ML-001" }
+              - column: { name: phone, value: "3001234567" }
+              - column: { name: email, value: "carlos.rodriguez@hospital.com" }
+        
+        - insert:
+            tableName: doctors
+            columns:
+              - column: { name: specialty_id, valueNumeric: 2 }  # Pediatrics
+              - column: { name: first_name, value: "María" }
+              - column: { name: last_name, value: "González" }
+              - column: { name: identification_number, value: "1001234568" }
+              - column: { name: medical_license, value: "ML-002" }
+              - column: { name: phone, value: "3001234568" }
+              - column: { name: email, value: "maria.gonzalez@hospital.com" }
+        
+        - insert:
+            tableName: doctors
+            columns:
+              - column: { name: specialty_id, valueNumeric: 3 }  # Cardiology
+              - column: { name: first_name, value: "Jorge" }
+              - column: { name: last_name, value: "Martínez" }
+              - column: { name: identification_number, value: "1001234569" }
+              - column: { name: medical_license, value: "ML-003" }
+              - column: { name: phone, value: "3001234569" }
+              - column: { name: email, value: "jorge.martinez@hospital.com" }
+        
+        - insert:
+            tableName: doctors
+            columns:
+              - column: { name: specialty_id, valueNumeric: 4 }  # Dermatology
+              - column: { name: first_name, value: "Ana" }
+              - column: { name: last_name, value: "López" }
+              - column: { name: identification_number, value: "1001234570" }
+              - column: { name: medical_license, value: "ML-004" }
+              - column: { name: phone, value: "3001234570" }
+              - column: { name: email, value: "ana.lopez@hospital.com" }
+        
+        - insert:
+            tableName: doctors
+            columns:
+              - column: { name: specialty_id, valueNumeric: 5 }  # Orthopedics
+              - column: { name: first_name, value: "Luis" }
+              - column: { name: last_name, value: "Ramírez" }
+              - column: { name: identification_number, value: "1001234571" }
+              - column: { name: medical_license, value: "ML-005" }
+              - column: { name: phone, value: "3001234571" }
+              - column: { name: email, value: "luis.ramirez@hospital.com" }
+        
+        - insert:
+            tableName: doctors
+            columns:
+              - column: { name: specialty_id, valueNumeric: 6 }  # Gynecology
+              - column: { name: first_name, value: "Patricia" }
+              - column: { name: last_name, value: "Torres" }
+              - column: { name: identification_number, value: "1001234572" }
+              - column: { name: medical_license, value: "ML-006" }
+              - column: { name: phone, value: "3001234572" }
+              - column: { name: email, value: "patricia.torres@hospital.com" }
+        
+        - insert:
+            tableName: doctors
+            columns:
+              - column: { name: specialty_id, valueNumeric: 7 }  # Ophthalmology
+              - column: { name: first_name, value: "Ricardo" }
+              - column: { name: last_name, value: "Herrera" }
+              - column: { name: identification_number, value: "1001234573" }
+              - column: { name: medical_license, value: "ML-007" }
+              - column: { name: phone, value: "3001234573" }
+              - column: { name: email, value: "ricardo.herrera@hospital.com" }
+        
+        - insert:
+            tableName: doctors
+            columns:
+              - column: { name: specialty_id, valueNumeric: 8 }  # Psychiatry
+              - column: { name: first_name, value: "Laura" }
+              - column: { name: last_name, value: "Vargas" }
+              - column: { name: identification_number, value: "1001234574" }
+              - column: { name: medical_license, value: "ML-008" }
+              - column: { name: phone, value: "3001234574" }
+              - column: { name: email, value: "laura.vargas@hospital.com" }
+        
+        - insert:
+            tableName: doctors
+            columns:
+              - column: { name: specialty_id, valueNumeric: 9 }  # Neurology
+              - column: { name: first_name, value: "Miguel" }
+              - column: { name: last_name, value: "Castillo" }
+              - column: { name: identification_number, value: "1001234575" }
+              - column: { name: medical_license, value: "ML-009" }
+              - column: { name: phone, value: "3001234575" }
+              - column: { name: email, value: "miguel.castillo@hospital.com" }
+        
+        - insert:
+            tableName: doctors
+            columns:
+              - column: { name: specialty_id, valueNumeric: 10 }  # Gastroenterology
+              - column: { name: first_name, value: "Sandra" }
+              - column: { name: last_name, value: "Moreno" }
+              - column: { name: identification_number, value: "1001234576" }
+              - column: { name: medical_license, value: "ML-010" }
+              - column: { name: phone, value: "3001234576" }
+              - column: { name: email, value: "sandra.moreno@hospital.com" }
+      
+      rollback:
+        - delete:
+            tableName: doctors

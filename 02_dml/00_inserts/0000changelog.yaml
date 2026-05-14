@@ -10,3 +10,11 @@ databaseChangeLog:
   - include:
       file: 003-insert-icd10-diagnoses.yaml
       relativeToChangelogFile: true    
+
+  - include:
+      file: 004-insert-doctors.yaml
+      relativeToChangelogFile: true
+
+  - include:
+      file: 005-insert-patients.yaml
+      relativeToChangelogFile: true    
