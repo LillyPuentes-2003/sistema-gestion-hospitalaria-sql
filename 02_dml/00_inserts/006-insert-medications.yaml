@@ -1,0 +1,196 @@
+databaseChangeLog:
+  - changeSet:
+      id: 006-insert-medications
+      author: Lilly
+      changes:
+        # Analgésicos
+        - insert:
+            tableName: medications
+            columns:
+              - column: { name: name, value: "Acetaminophen" }
+              - column: { name: generic_name, value: "Paracetamol" }
+              - column: { name: presentation, value: "Tablet" }
+              - column: { name: concentration, value: "500mg" }
+              - column: { name: unit_price, valueNumeric: 500 }
+              - column: { name: stock_quantity, valueNumeric: 1000 }
+              - column: { name: minimum_stock, valueNumeric: 100 }
+              - column: { name: manufacturer, value: "Genfar" }
+        
+        - insert:
+            tableName: medications
+            columns:
+              - column: { name: name, value: "Ibuprofen" }
+              - column: { name: generic_name, value: "Ibuprofen" }
+              - column: { name: presentation, value: "Tablet" }
+              - column: { name: concentration, value: "400mg" }
+              - column: { name: unit_price, valueNumeric: 800 }
+              - column: { name: stock_quantity, valueNumeric: 800 }
+              - column: { name: minimum_stock, valueNumeric: 100 }
+              - column: { name: manufacturer, value: "MK" }
+        
+        # Antibióticos
+        - insert:
+            tableName: medications
+            columns:
+              - column: { name: name, value: "Amoxicillin" }
+              - column: { name: generic_name, value: "Amoxicillin" }
+              - column: { name: presentation, value: "Capsule" }
+              - column: { name: concentration, value: "500mg" }
+              - column: { name: unit_price, valueNumeric: 1200 }
+              - column: { name: stock_quantity, valueNumeric: 600 }
+              - column: { name: minimum_stock, valueNumeric: 80 }
+              - column: { name: manufacturer, value: "Genfar" }
+        
+        - insert:
+            tableName: medications
+            columns:
+              - column: { name: name, value: "Azithromycin" }
+              - column: { name: generic_name, value: "Azithromycin" }
+              - column: { name: presentation, value: "Tablet" }
+              - column: { name: concentration, value: "500mg" }
+              - column: { name: unit_price, valueNumeric: 2500 }
+              - column: { name: stock_quantity, valueNumeric: 400 }
+              - column: { name: minimum_stock, valueNumeric: 50 }
+              - column: { name: manufacturer, value: "Pfizer" }
+        
+        # Antiácidos
+        - insert:
+            tableName: medications
+            columns:
+              - column: { name: name, value: "Omeprazole" }
+              - column: { name: generic_name, value: "Omeprazole" }
+              - column: { name: presentation, value: "Capsule" }
+              - column: { name: concentration, value: "20mg" }
+              - column: { name: unit_price, valueNumeric: 1500 }
+              - column: { name: stock_quantity, valueNumeric: 700 }
+              - column: { name: minimum_stock, valueNumeric: 100 }
+              - column: { name: manufacturer, value: "Tecnoquímicas" }
+        
+        - insert:
+            tableName: medications
+            columns:
+              - column: { name: name, value: "Ranitidine" }
+              - column: { name: generic_name, value: "Ranitidine" }
+              - column: { name: presentation, value: "Tablet" }
+              - column: { name: concentration, value: "150mg" }
+              - column: { name: unit_price, valueNumeric: 900 }
+              - column: { name: stock_quantity, valueNumeric: 500 }
+              - column: { name: minimum_stock, valueNumeric: 80 }
+              - column: { name: manufacturer, value: "Lafrancol" }
+        
+        # Antihipertensivos
+        - insert:
+            tableName: medications
+            columns:
+              - column: { name: name, value: "Losartan" }
+              - column: { name: generic_name, value: "Losartan" }
+              - column: { name: presentation, value: "Tablet" }
+              - column: { name: concentration, value: "50mg" }
+              - column: { name: unit_price, valueNumeric: 1800 }
+              - column: { name: stock_quantity, valueNumeric: 600 }
+              - column: { name: minimum_stock, valueNumeric: 100 }
+              - column: { name: manufacturer, value: "MK" }
+        
+        - insert:
+            tableName: medications
+            columns:
+              - column: { name: name, value: "Enalapril" }
+              - column: { name: generic_name, value: "Enalapril" }
+              - column: { name: presentation, value: "Tablet" }
+              - column: { name: concentration, value: "10mg" }
+              - column: { name: unit_price, valueNumeric: 1200 }
+              - column: { name: stock_quantity, valueNumeric: 700 }
+              - column: { name: minimum_stock, valueNumeric: 100 }
+              - column: { name: manufacturer, value: "Genfar" }
+        
+        # Antidiabéticos
+        - insert:
+            tableName: medications
+            columns:
+              - column: { name: name, value: "Metformin" }
+              - column: { name: generic_name, value: "Metformin" }
+              - column: { name: presentation, value: "Tablet" }
+              - column: { name: concentration, value: "850mg" }
+              - column: { name: unit_price, valueNumeric: 1000 }
+              - column: { name: stock_quantity, valueNumeric: 900 }
+              - column: { name: minimum_stock, valueNumeric: 150 }
+              - column: { name: manufacturer, value: "Tecnoquímicas" }
+        
+        - insert:
+            tableName: medications
+            columns:
+              - column: { name: name, value: "Glibenclamide" }
+              - column: { name: generic_name, value: "Glibenclamide" }
+              - column: { name: presentation, value: "Tablet" }
+              - column: { name: concentration, value: "5mg" }
+              - column: { name: unit_price, valueNumeric: 800 }
+              - column: { name: stock_quantity, valueNumeric: 500 }
+              - column: { name: minimum_stock, valueNumeric: 80 }
+              - column: { name: manufacturer, value: "MK" }
+        
+        # Antihistamínicos
+        - insert:
+            tableName: medications
+            columns:
+              - column: { name: name, value: "Loratadine" }
+              - column: { name: generic_name, value: "Loratadine" }
+              - column: { name: presentation, value: "Tablet" }
+              - column: { name: concentration, value: "10mg" }
+              - column: { name: unit_price, valueNumeric: 1500 }
+              - column: { name: stock_quantity, valueNumeric: 600 }
+              - column: { name: minimum_stock, valueNumeric: 100 }
+              - column: { name: manufacturer, value: "Genfar" }
+        
+        # Vitaminas
+        - insert:
+            tableName: medications
+            columns:
+              - column: { name: name, value: "Vitamin B Complex" }
+              - column: { name: generic_name, value: "B Vitamins" }
+              - column: { name: presentation, value: "Tablet" }
+              - column: { name: concentration, value: "Various" }
+              - column: { name: unit_price, valueNumeric: 1200 }
+              - column: { name: stock_quantity, valueNumeric: 800 }
+              - column: { name: minimum_stock, valueNumeric: 100 }
+              - column: { name: manufacturer, value: "Bayer" }
+        
+        - insert:
+            tableName: medications
+            columns:
+              - column: { name: name, value: "Vitamin C" }
+              - column: { name: generic_name, value: "Ascorbic Acid" }
+              - column: { name: presentation, value: "Tablet" }
+              - column: { name: concentration, value: "500mg" }
+              - column: { name: unit_price, valueNumeric: 800 }
+              - column: { name: stock_quantity, valueNumeric: 1000 }
+              - column: { name: minimum_stock, valueNumeric: 150 }
+              - column: { name: manufacturer, value: "MK" }
+        
+        # Antiinflamatorios
+        - insert:
+            tableName: medications
+            columns:
+              - column: { name: name, value: "Diclofenac" }
+              - column: { name: generic_name, value: "Diclofenac Sodium" }
+              - column: { name: presentation, value: "Tablet" }
+              - column: { name: concentration, value: "50mg" }
+              - column: { name: unit_price, valueNumeric: 1000 }
+              - column: { name: stock_quantity, valueNumeric: 700 }
+              - column: { name: minimum_stock, valueNumeric: 100 }
+              - column: { name: manufacturer, value: "Tecnoquímicas" }
+        
+        - insert:
+            tableName: medications
+            columns:
+              - column: { name: name, value: "Naproxen" }
+              - column: { name: generic_name, value: "Naproxen Sodium" }
+              - column: { name: presentation, value: "Tablet" }
+              - column: { name: concentration, value: "250mg" }
+              - column: { name: unit_price, valueNumeric: 1100 }
+              - column: { name: stock_quantity, valueNumeric: 600 }
+              - column: { name: minimum_stock, valueNumeric: 90 }
+              - column: { name: manufacturer, value: "Genfar" }
+      
+      rollback:
+        - delete:
+            tableName: medications

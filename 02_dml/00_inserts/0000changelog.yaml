@@ -17,4 +17,8 @@ databaseChangeLog:
 
   - include:
       file: 005-insert-patients.yaml
-      relativeToChangelogFile: true    
+      relativeToChangelogFile: true  
+
+  - include:
+      file: 006-insert-medications.yaml
+      relativeToChangelogFile: true      
