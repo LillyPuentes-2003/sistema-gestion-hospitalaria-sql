@@ -1,2 +1,4 @@
 databaseChangeLog:
-  # Los changesets irán aquí
+  - include:
+      file: 001-insert-specialties.yaml
+      relativeToChangelogFile: true

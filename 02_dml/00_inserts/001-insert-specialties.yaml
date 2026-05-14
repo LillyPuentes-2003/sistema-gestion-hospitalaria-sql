@@ -1,0 +1,158 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-insert-specialties
+      author: Lilly
+      changes:
+        - insert:
+            tableName: specialties
+            columns:
+              - column:
+                  name: name
+                  value: General Medicine
+              - column:
+                  name: description
+                  value: Primary healthcare and general medical treatment
+        
+        - insert:
+            tableName: specialties
+            columns:
+              - column:
+                  name: name
+                  value: Pediatrics
+              - column:
+                  name: description
+                  value: Medical care for infants, children and adolescents
+        
+        - insert:
+            tableName: specialties
+            columns:
+              - column:
+                  name: name
+                  value: Cardiology
+              - column:
+                  name: description
+                  value: Diagnosis and treatment of heart and cardiovascular conditions
+        
+        - insert:
+            tableName: specialties
+            columns:
+              - column:
+                  name: name
+                  value: Dermatology
+              - column:
+                  name: description
+                  value: Treatment of skin, hair and nail disorders
+        
+        - insert:
+            tableName: specialties
+            columns:
+              - column:
+                  name: name
+                  value: Orthopedics
+              - column:
+                  name: description
+                  value: Treatment of musculoskeletal system disorders
+        
+        - insert:
+            tableName: specialties
+            columns:
+              - column:
+                  name: name
+                  value: Gynecology
+              - column:
+                  name: description
+                  value: Women's reproductive health and diseases
+        
+        - insert:
+            tableName: specialties
+            columns:
+              - column:
+                  name: name
+                  value: Ophthalmology
+              - column:
+                  name: description
+                  value: Eye and vision care
+        
+        - insert:
+            tableName: specialties
+            columns:
+              - column:
+                  name: name
+                  value: Psychiatry
+              - column:
+                  name: description
+                  value: Mental health and behavioral disorders
+        
+        - insert:
+            tableName: specialties
+            columns:
+              - column:
+                  name: name
+                  value: Neurology
+              - column:
+                  name: description
+                  value: Disorders of the nervous system
+        
+        - insert:
+            tableName: specialties
+            columns:
+              - column:
+                  name: name
+                  value: Gastroenterology
+              - column:
+                  name: description
+                  value: Digestive system disorders
+        
+        - insert:
+            tableName: specialties
+            columns:
+              - column:
+                  name: name
+                  value: Pulmonology
+              - column:
+                  name: description
+                  value: Respiratory system diseases
+        
+        - insert:
+            tableName: specialties
+            columns:
+              - column:
+                  name: name
+                  value: Nephrology
+              - column:
+                  name: description
+                  value: Kidney and urinary system disorders
+        
+        - insert:
+            tableName: specialties
+            columns:
+              - column:
+                  name: name
+                  value: Endocrinology
+              - column:
+                  name: description
+                  value: Hormonal and metabolic disorders
+        
+        - insert:
+            tableName: specialties
+            columns:
+              - column:
+                  name: name
+                  value: Oncology
+              - column:
+                  name: description
+                  value: Cancer diagnosis and treatment
+        
+        - insert:
+            tableName: specialties
+            columns:
+              - column:
+                  name: name
+                  value: Emergency Medicine
+              - column:
+                  name: description
+                  value: Acute illness and injury care
+      
+      rollback:
+        - delete:
+            tableName: specialties
